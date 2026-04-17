@@ -1,0 +1,20 @@
+{
+  "name": "true-hue",
+  "version": "3.0.0",
+  "description": "Professional-grade personal color analysis (12-season system) matching $300-$400 human consultant rigor. Runs full intake protocol, four-dimension analysis, mandatory Phase 3.5 check-in, adjacent-season draping, deep-skin protocols, palette refinement, and post-delivery validation.",
+  "author": {
+    "name": "Bryan Ankielewicz",
+    "email": "bryan.ankielewicz@live.com"
+  },
+  "homepage": "https://github.com/bankielewicz/TrueHue",
+  "repository": "https://github.com/bankielewicz/TrueHue",
+  "license": "MIT",
+  "keywords": [
+    "color-analysis",
+    "seasonal-color",
+    "personal-style",
+    "12-season-system",
+    "wardrobe",
+    "palette"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "skill_name": "true-hue",
+  "evals": [
+    {
+      "id": 1,
+      "name": "full_mode1_clean_inputs",
+      "prompt": "I want a full personal color analysis. Can you walk me through the process?",
+      "expected_output": "Phase 0 consultation prep is run first, then the intake template is delivered with all required elements (photo protocol, 5 required shots + optional Shot 6 inner forearm, solo photographer solutions, questionnaire with grooming categories and lifestyle/climate questions, privacy notes). Claude does not begin analyzing any image content until the user submits a full intake.",
+      "files": [],
+      "expectations": [
+        "Response runs Phase 0 consultation prep (asks whether user has been typed before, what's driving the analysis, and time available) before delivering the intake template",
+        "Intake template references all required photo shots including optional Shot 6 (inner forearm)",
+        "Questionnaire includes grooming categories (item 14)",
+        "Questionnaire includes lifestyle/climate questions (items 13a, 13b, 13c)",
+        "Questionnaire includes privacy notes section above Part A",
+        "Solo photographer solutions section present",
+        "No season determination is made at this turn — only intake is delivered"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "single_selfie_no_intake",
+      "prompt": "[User attaches a single selfie] — what's my color season?",
+      "expected_output": "Claude refuses to analyze from one photo, delivers the intake protocol, and requests a full submission. No season determination is made.",
+      "files": [],
+      "expectations": [
+        "Response refuses single-photo analysis",
+        "Response delivers the intake template (or references it) so the user can supply the five required photos plus questionnaire",
+        "Response does not assign any of the 12 seasons to the user",
+        "Response cites the quality-gate principle (or the single-photo failure mode) rather than attempting a best-guess"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "mode3_single_item_check",
+      "prompt": "I'm a Soft Autumn. Can you tell me if this sweater works with my palette?",
+      "expected_output": "Claude confirms the user's stated season and confidence level (prior professional analysis vs. quiz), requests a photo of the item, and runs the Mode 3 single-item check against the Soft Autumn palette from the palette library.",
+      "files": [],
+      "expectations": [
+        "Response asks how the Soft Autumn typing was determined (professional analysis, prior Mode 1, self-identification, quiz) to calibrate confidence before proceeding",
+        "Response requests a photo of the sweater for hex comparison",
+        "Response indicates the result will be an item-specific verdict (on-palette / borrowable / off-palette) with hex comparison and placement recommendation — not a full analysis",
+        "Response does not attempt a full Mode 1 intake for a user who states an existing season"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "mode4_palette_refinement",
+      "prompt": "I'm a confirmed Deep Winter. Can I wear emerald green, or is that out of my palette?",
+      "expected_output": "Claude recognizes this as Mode 4 (palette refinement, Specific Color Check sub-mode), consults assets/palette_refinement_template.md, and evaluates emerald green against the Deep Winter palette with a hex-level on-palette / borrowable / off-palette verdict, conditions, and reasoning.",
+      "files": [],
+      "expectations": [
+        "Response identifies the request as Mode 4 Specific Color Check (not Mode 1)",
+        "Response cites the Deep Winter palette from the palette library",
+        "Response gives a classification of the emerald color: on-palette, borrowable with conditions, or off-palette",
+        "Response explains which dimensions support or violate the classification (temperature, saturation, value)",
+        "Response does not produce a full 36-color palette or starter capsule"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "between_seasons_ambiguity",
+      "prompt": "I've taken three color analysis quizzes and gotten Soft Summer twice and Soft Autumn once. I don't know which is right.",
+      "expected_output": "Claude recognizes this as a between-seasons candidate, consults references/between_seasons_protocol.md after confirming via intake, and offers structured disambiguation (dual mini-palette + decisive test colors + testing protocol) rather than forcing one season.",
+      "files": [],
+      "expectations": [
+        "Response acknowledges that Soft Summer / Soft Autumn is a classic adjacent-season pair and offers a between-seasons workflow (not a forced single season)",
+        "Response indicates it will run full intake before disambiguation (the prior quiz results don't replace Mode 1 evidence)",
+        "Response references the between-seasons protocol, dual mini-palette format, and decisive test colors",
+        "Response does not immediately declare one season without evidence"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "deep_skin_no_visible_veins",
+      "prompt": "I've submitted all the required photos and the questionnaire. The wrist photo shows no clearly visible veins. I noted 'veins not visible' in the questionnaire. My foundation history: Fenty 490 works; Maybelline 380 turned grey on me.",
+      "expected_output": "Claude skips the vein test per the deep-skin protocol, reads undertone from the fabric drape + jewelry + foundation history + compliment memory cluster, and explicitly notes in the analysis that the vein test was skipped rather than forcing a reading.",
+      "files": [],
+      "expectations": [
+        "Response does not attempt to read veins — explicitly acknowledges the test was skipped per deep-skin protocol",
+        "Response cites undertone_cross_checks.md or the deep-skin protocol",
+        "Response uses at least two alternative tests (fabric draping + jewelry + foundation history + compliment pattern) for undertone determination",
+        "Response treats vein invisibility as expected and non-degrading to analysis quality (no apology, no confidence drop attributable to the skipped test)",
+        "If proceeding to Phase 3.5 check-in, response uses deep-skin-appropriate questions from the checkpoint library (foundation behavior, compliment pattern), not vein- or sun-response-based questions"
+      ]
+    }
+  ]
+}

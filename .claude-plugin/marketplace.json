@@ -1,0 +1,22 @@
+{
+  "name": "truehue-marketplace",
+  "owner": {
+    "name": "Bryan Ankielewicz",
+    "email": "bryan.ankielewicz@live.com"
+  },
+  "plugins": [
+    {
+      "name": "true-hue",
+      "description": "Professional-grade personal color analysis (12-season system).",
+      "category": "personal-style",
+      "source": "./",
+      "version": "3.0.0",
+      "author": {
+        "name": "Bryan Ankielewicz",
+        "email": "bryan.ankielewicz@live.com"
+      },
+      "homepage": "https://github.com/bankielewicz/TrueHue",
+      "keywords": ["color-analysis", "seasonal-color", "personal-style"]
+    }
+  ]
+}
