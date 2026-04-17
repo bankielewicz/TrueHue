@@ -93,3 +93,7 @@ A few honest caveats:
 True Hue exists because the mainstream AI color analysis apps hand out seasons like fortune cookies. Seasonal color analysis is a real craft — analysts spend years getting good at it — and a sixty-second quiz from one selfie doesn't get near the real thing. This plugin takes the process seriously: it rejects bad inputs, cites its evidence, handles edge cases (between seasons, olive complexions, sun damage, color blindness) as first-class concerns, and is honest about what it can and can't do.
 
 Built on Anthropic's skill-creator framework. Licensed MIT. Issues, corrections, and reports of bad outputs all welcome at [github.com/bankielewicz/TrueHue/issues](https://github.com/bankielewicz/TrueHue/issues).
+
+## Support
+
+If True Hue saved you a $350 consultation fee, or just gave you the first palette that actually works for you, you can [buy me a coffee](https://buymeacoffee.com/devforgeai). Zero obligation — the plugin is MIT and free forever. It's just appreciated.

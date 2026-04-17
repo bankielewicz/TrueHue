@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="markTitle markDesc">
+  <title id="markTitle">True Hue mark</title>
+  <desc id="markDesc">Rounded-square mark with twelve seasonal color swatches arranged in a four-row grid.</desc>
+  <rect x="4" y="4" width="120" height="120" rx="20" fill="#0B0E14"/>
+  <g transform="translate(6,10)" aria-hidden="true">
+    <!-- Spring family -->
+    <rect x="0"  y="0"  width="36" height="24" rx="3" fill="#ECA299"/>
+    <rect x="40" y="0"  width="36" height="24" rx="3" fill="#F4A460"/>
+    <rect x="80" y="0"  width="36" height="24" rx="3" fill="#FF6B5B"/>
+    <!-- Summer family -->
+    <rect x="0"  y="28" width="36" height="24" rx="3" fill="#B0C4DE"/>
+    <rect x="40" y="28" width="36" height="24" rx="3" fill="#3182C0"/>
+    <rect x="80" y="28" width="36" height="24" rx="3" fill="#8FA5A5"/>
+    <!-- Autumn family -->
+    <rect x="0"  y="56" width="36" height="24" rx="3" fill="#A28955"/>
+    <rect x="40" y="56" width="36" height="24" rx="3" fill="#CC7722"/>
+    <rect x="80" y="56" width="36" height="24" rx="3" fill="#8B4513"/>
+    <!-- Winter family -->
+    <rect x="0"  y="84" width="36" height="24" rx="3" fill="#7D1B4D"/>
+    <rect x="40" y="84" width="36" height="24" rx="3" fill="#483D8B"/>
+    <rect x="80" y="84" width="36" height="24" rx="3" fill="#DA4A94"/>
+  </g>
+</svg>

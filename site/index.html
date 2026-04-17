@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>True Hue — Personal color analysis for Claude Code</title>
+  <meta name="description" content="A Claude Code plugin that runs professional-grade 12-season personal color analysis. Five-photo intake, four-dimension analysis with citations, mandatory check-in, full palette deliverable. MIT licensed.">
+
+  <link rel="canonical" href="https://bankielewicz.github.io/TrueHue/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bankielewicz.github.io/TrueHue/">
+  <meta property="og:title" content="True Hue — Personal color analysis for Claude Code">
+  <meta property="og:description" content="Professional-grade 12-season color analysis as a Claude Code plugin. Five-photo intake, evidence-cited dimension analysis, full palette deliverable with hex codes, starter capsule, grooming guidance. MIT licensed.">
+  <meta property="og:image" content="https://bankielewicz.github.io/TrueHue/assets/logo.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="True Hue — Personal color analysis for Claude Code">
+  <meta name="twitter:description" content="The rigorous kind. Five-photo intake, four-dimension analysis, a full palette with hex codes and a starter capsule. MIT licensed Claude Code plugin.">
+  <meta name="twitter:image" content="https://bankielewicz.github.io/TrueHue/assets/logo.svg">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="#top" class="logo-link" aria-label="True Hue home">
+      <svg viewBox="0 0 128 128" width="28" height="28" aria-hidden="true">
+        <rect x="4" y="4" width="120" height="120" rx="20" fill="#0B0E14"/>
+        <g transform="translate(6,10)">
+          <rect x="0"  y="0"  width="36" height="24" rx="3" fill="#ECA299"/>
+          <rect x="40" y="0"  width="36" height="24" rx="3" fill="#F4A460"/>
+          <rect x="80" y="0"  width="36" height="24" rx="3" fill="#FF6B5B"/>
+          <rect x="0"  y="28" width="36" height="24" rx="3" fill="#B0C4DE"/>
+          <rect x="40" y="28" width="36" height="24" rx="3" fill="#3182C0"/>
+          <rect x="80" y="28" width="36" height="24" rx="3" fill="#8FA5A5"/>
+          <rect x="0"  y="56" width="36" height="24" rx="3" fill="#A28955"/>
+          <rect x="40" y="56" width="36" height="24" rx="3" fill="#CC7722"/>
+          <rect x="80" y="56" width="36" height="24" rx="3" fill="#8B4513"/>
+          <rect x="0"  y="84" width="36" height="24" rx="3" fill="#7D1B4D"/>
+          <rect x="40" y="84" width="36" height="24" rx="3" fill="#483D8B"/>
+          <rect x="80" y="84" width="36" height="24" rx="3" fill="#DA4A94"/>
+        </g>
+      </svg>
+      <span>TrueHue</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#install">Install</a>
+      <a href="#what">What you get</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-external" href="https://github.com/bankielewicz/TrueHue">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-logo" aria-hidden="true">
+        <svg viewBox="0 0 600 180">
+          <text x="300" y="88" text-anchor="middle"
+                font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+                font-size="72" font-weight="600" letter-spacing="-2"
+                fill="currentColor">TrueHue</text>
+          <g transform="translate(49,120)">
+            <rect x="0"   y="0" width="40" height="20" rx="3" fill="#ECA299"/>
+            <rect x="42"  y="0" width="40" height="20" rx="3" fill="#F4A460"/>
+            <rect x="84"  y="0" width="40" height="20" rx="3" fill="#FF6B5B"/>
+            <rect x="126" y="0" width="40" height="20" rx="3" fill="#B0C4DE"/>
+            <rect x="168" y="0" width="40" height="20" rx="3" fill="#3182C0"/>
+            <rect x="210" y="0" width="40" height="20" rx="3" fill="#8FA5A5"/>
+            <rect x="252" y="0" width="40" height="20" rx="3" fill="#A28955"/>
+            <rect x="294" y="0" width="40" height="20" rx="3" fill="#CC7722"/>
+            <rect x="336" y="0" width="40" height="20" rx="3" fill="#8B4513"/>
+            <rect x="378" y="0" width="40" height="20" rx="3" fill="#7D1B4D"/>
+            <rect x="420" y="0" width="40" height="20" rx="3" fill="#483D8B"/>
+            <rect x="462" y="0" width="40" height="20" rx="3" fill="#DA4A94"/>
+          </g>
+        </svg>
+      </div>
+
+      <h1>Personal color analysis for Claude Code.</h1>
+      <p class="tagline">The rigorous kind.</p>
+      <p class="hero-blurb">Five calibrated photos. Four-dimension analysis with cited evidence. A mandatory check-in before anything gets finalized. A full palette with hex codes, metals, grooming guidance, and a shoppable starter capsule. What a $300–$400 in-person consultation looks like, run from your terminal.</p>
+
+      <div class="install-block" id="install" aria-labelledby="install-heading">
+        <span id="install-heading" class="sr-only">Install command</span>
+        <pre id="install-cmd">/plugin marketplace add https://github.com/bankielewicz/TrueHue
+/plugin install true-hue@truehue-marketplace</pre>
+        <button class="copy-btn" type="button" data-copy-target="#install-cmd" aria-label="Copy install command">Copy</button>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="https://github.com/bankielewicz/TrueHue">View on GitHub</a>
+        <a class="btn btn-secondary" href="#how">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="container">
+      <h2>Why this exists</h2>
+      <p>Most AI color analysis tools hand you a season in under ten seconds from one selfie in kitchen light. That's entertainment, not analysis. Real seasonal color analysis is a craft — analysts get good at it over years, they look at multiple areas of the face under calibrated light, they drape fabric, they ask the right follow-up questions, and they'll tell you honestly when the evidence is ambiguous instead of forcing a verdict.</p>
+      <p>True Hue takes the process seriously. It asks for five calibrated photos and a thorough questionnaire. It refuses to analyze what's in front of it when the inputs aren't good enough — a reshoot request is better than a fake-confident wrong answer. It works through four dimensions (undertone, value, chroma, contrast) separately, citing evidence from specific photos and specific questionnaire answers, before a season gets named. Then it presents the readings and asks two targeted questions designed to surface disagreement, not confirmation. Only after that does a season get named, and only after that does a palette get produced.</p>
+      <p>Deep skin and olive complexions are first-class cases, not afterthoughts. Between-seasons outcomes are acknowledged rather than forced. Color-blind users get an opt-in accessible deliverable format. Privacy guidance is presented before photos are requested. None of it is ornamental — all of it exists because cheap tools skip these steps and their results show.</p>
+    </div>
+  </section>
+
+  <section class="what" id="what">
+    <div class="container">
+      <h2>What you get</h2>
+      <p>A complete deliverable in under thirty minutes of back-and-forth. Every analysis includes:</p>
+      <ul class="deliverable">
+        <li><span class="dot" style="background: var(--c-warm-autumn)"></span>Your season and honest confidence level</li>
+        <li><span class="dot" style="background: var(--c-cool-summer)"></span>Four-dimension analysis with photo citations</li>
+        <li><span class="dot" style="background: var(--c-deep-winter)"></span>Why not each adjacent season, specifically</li>
+        <li><span class="dot" style="background: var(--c-soft-autumn)"></span>~36 hex codes organized by wardrobe role</li>
+        <li><span class="dot" style="background: var(--c-bright-spring)"></span>Within-palette pairing rules</li>
+        <li><span class="dot" style="background: var(--c-soft-summer)"></span>Fabric sheen and weight guidance</li>
+        <li><span class="dot" style="background: var(--c-bright-winter)"></span>Pattern and print recommendations</li>
+        <li><span class="dot" style="background: var(--c-deep-autumn)"></span>8–12 colors to avoid, each with a reason</li>
+        <li><span class="dot" style="background: var(--c-cool-winter)"></span>Your neutrals specifically — "black," "white," "navy"</li>
+        <li><span class="dot" style="background: var(--c-warm-spring)"></span>Metals: primary, secondary, near-face avoid</li>
+        <li><span class="dot" style="background: var(--c-light-spring)"></span>Conditional grooming sections (only what you selected)</li>
+        <li><span class="dot" style="background: var(--c-light-summer)"></span>Starter capsule at two budget tiers</li>
+      </ul>
+      <p>Optionally, Claude can generate PDF swatch cards — full-page reference, pocketable wallet card, or phone wallpaper — for shopping on the go.</p>
+    </div>
+  </section>
+
+  <section class="twelve" id="twelve">
+    <div class="container">
+      <h2>The twelve seasons</h2>
+      <p>The 12-season system groups colorings into four family temperaments — Spring (warm and bright), Summer (cool and muted), Autumn (warm and muted), Winter (cool and bright) — with three sub-seasons inside each family that lean toward neighbors on the flow chart. True Hue uses LAB-validated palette anchors from the Hue Atlas reference set, extended to a ~36-color working palette per season.</p>
+
+      <div class="seasons-grid" aria-label="Twelve color season anchors">
+        <div class="season"><span class="swatch" style="background: var(--c-light-spring)"></span><span class="label">Light Spring</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-warm-spring)"></span><span class="label">Warm Spring</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-bright-spring)"></span><span class="label">Bright Spring</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-light-summer)"></span><span class="label">Light Summer</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-cool-summer)"></span><span class="label">Cool Summer</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-soft-summer)"></span><span class="label">Soft Summer</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-soft-autumn)"></span><span class="label">Soft Autumn</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-warm-autumn)"></span><span class="label">Warm Autumn</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-deep-autumn)"></span><span class="label">Deep Autumn</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-deep-winter)"></span><span class="label">Deep Winter</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-cool-winter)"></span><span class="label">Cool Winter</span></div>
+        <div class="season"><span class="swatch" style="background: var(--c-bright-winter)"></span><span class="label">Bright Winter</span></div>
+      </div>
+
+      <p>The swatch above each season name is an anchor — a single representative hex from the season's palette. Your actual deliverable contains the full ~36-color working palette for your season, tailored to your specific within-season position (for example, Soft Autumn closer to Warm Autumn gets richer mids; Soft Autumn closer to Soft Summer gets cooler neutrals). See the <a href="https://github.com/bankielewicz/TrueHue/blob/main/skills/true-hue/references/twelve_seasons.md">twelve_seasons reference</a> for the full definitions and adjacency map.</p>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="container">
+      <h2>How it works</h2>
+      <p>Seven phases, roughly thirty minutes of back-and-forth plus photo-capture time.</p>
+      <ol class="phases">
+        <li>
+          <h3>Consultation prep</h3>
+          <p>A few routing questions up front. Have you been typed before? What's driving this? How much time do you have? Saves you from a 25-minute intake when a 5-minute single-item check is actually what you need.</p>
+        </li>
+        <li>
+          <h3>Intake protocol</h3>
+          <p>Five calibrated photos in natural indirect daylight, with a plain white paper held at your cheek as a white-balance reference. A 15+ item questionnaire covering hair, sun response, jewelry harmony, compliments and fails, foundation history, lifestyle, and grooming categories.</p>
+        </li>
+        <li>
+          <h3>Quality gate</h3>
+          <p>Photos get inspected against the protocol. Flash artifacts, makeup residue, contaminated white balance, missing shots — rejected. Partial reshoots are supported; you don't redo the whole session for one failing photo.</p>
+        </li>
+        <li>
+          <h3>Four-dimension analysis</h3>
+          <p>Undertone, value, chroma, and contrast are worked through separately with evidence cited from specific photos and answers. For deep skin, the vein test gets skipped in favor of fabric draping, foundation behavior, and compliment pattern. Olive complexions get their own handling.</p>
+        </li>
+        <li>
+          <h3>Mandatory check-in</h3>
+          <p>Before a season is named, the four readings are presented to you with two targeted questions drawn from a vetted library. Evidence-based pushback adjusts the reading. Preference-based pushback ("I want to be a Spring") holds the analytical line, with explanation. This phase catches misreads when they're cheap to fix.</p>
+        </li>
+        <li>
+          <h3>Draping + deliverable</h3>
+          <p>Season named, with explicit "why not" reasoning for both adjacent seasons. Full palette deliverable: ~36 hex codes by role, colors to avoid with reasons, metals, neutrals specifically, pattern and fabric guidance, grooming sections you selected, two-tier starter capsule with a six-month phasing order.</p>
+        </li>
+        <li>
+          <h3>Walkthrough + follow-up</h3>
+          <p>Optional: PDF swatch cards (full-page, wallet, phone wallpaper). Walkthrough of any section in depth. Post-delivery validation if colors aren't working after you wear them — adjustments within the same season, or in rare cases a reconsideration.</p>
+        </li>
+      </ol>
+      <p style="margin-top: 24px;"><a href="https://github.com/bankielewicz/TrueHue/blob/main/docs/getting-started.md">Read the full walkthrough with sample exchanges →</a></p>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Is this actually different from free color analysis quiz apps?</summary>
+          <p>Yes, in two concrete ways. Free quizzes take one selfie or ask you to pick eye and hair colors from a grid — not enough signal to determine a season reliably, and the math on it is shallow. True Hue requires five calibrated photos, a thorough questionnaire, and works through four dimensions separately with citations. Second, free quizzes always return one answer in ten seconds because a no-answer doesn't feel like a product. True Hue rejects bad inputs, acknowledges genuine ambiguity, and tells you honestly when in-person analysis would produce a better result than it can.</p>
+        </details>
+        <details>
+          <summary>How long does it actually take?</summary>
+          <p>Plan on 20–30 minutes for a first full Mode 1 analysis — roughly 10–15 minutes for photos and the questionnaire, plus 10–15 minutes of back-and-forth with Claude. Single-item checks are 2–5 minutes. Closet audits are 5–15 minutes depending on how many items. Palette refinement (for users already typed) is 5–15 minutes.</p>
+        </details>
+        <details>
+          <summary>What about deep skin? The standard Sci\ART tests don't work for me.</summary>
+          <p>They mostly don't, and True Hue knows this. The vein test gets skipped (veins aren't reliably visible on deeply pigmented skin), and the sun-response test gets de-weighted. The undertone read leans instead on the white vs. cream fabric drape, foundation oxidation behavior, compliment pattern, and jewelry harmony — all of which work across skin depths. Deep skin is first-class throughout the deliverable — the foundation brand recommendations cover deep skin ranges, the blush guidance acknowledges higher saturation is needed to read visibly, the protocols are built in, not retrofitted.</p>
+        </details>
+        <details>
+          <summary>Is my photo data safe?</summary>
+          <p>Photos you submit are part of the chat session. When the conversation is deleted they no longer persist to future sessions. Anthropic does not use chat content (including images) for training by default. You can crop photos tightly to avoid identifying backgrounds or logos without reducing analysis quality. Screenshots you share elsewhere are outside Claude's and Anthropic's privacy controls. These are all accurate for Anthropic's direct products; third-party developer applications built on the Claude API may have different policies.</p>
+        </details>
+        <details>
+          <summary>I'm colorblind. Can I use this?</summary>
+          <p>Yes. The intake questionnaire asks about color vision. If you indicate any form of deficiency, the deliverable includes a color-blind accessible format — standardized color names, value tiers, saturation levels, and hex codes for reference — plus flagged palette pairs that may appear similar under your specific type of deficiency, and shopping strategies (retailer app labels, trusting lived experience over on-screen rendering).</p>
+        </details>
+        <details>
+          <summary>What if Claude gets the season wrong?</summary>
+          <p>The mandatory check-in phase is designed specifically to catch this before a season is named. If something feels off in the four-dimension reading, say so with evidence. Evidence-based pushback adjusts the reading. If you only discover issues after receiving the deliverable — you've worn some of the palette and certain colors fail — come back and say so. The post-delivery validation workflow handles it, from minor hex substitutions within the same season (most common) to a full reanalysis with fresh photos (rare but sometimes correct).</p>
+        </details>
+        <details>
+          <summary>Can I use this on the Claude web app or mobile app?</summary>
+          <p>True Hue ships as a Claude Code plugin, so it installs into the Claude Code desktop/CLI environment. The underlying skill can be invoked by any Claude with file read/write capabilities, but the install command above is Claude Code specific. If you're on claude.ai and want to try the same protocol, you can ask Claude to follow the intake and analysis approach described in the repo — it won't auto-load the skill but will work from the descriptions.</p>
+        </details>
+      </div>
+      <p style="margin-top: 28px;"><a href="https://github.com/bankielewicz/TrueHue/blob/main/docs/faq.md">Read the full FAQ →</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <a href="#top" class="logo-link" aria-label="True Hue home">
+        <svg viewBox="0 0 128 128" width="22" height="22" aria-hidden="true">
+          <rect x="4" y="4" width="120" height="120" rx="20" fill="#0B0E14"/>
+          <g transform="translate(6,10)">
+            <rect x="0"  y="0"  width="36" height="24" rx="3" fill="#ECA299"/>
+            <rect x="40" y="0"  width="36" height="24" rx="3" fill="#F4A460"/>
+            <rect x="80" y="0"  width="36" height="24" rx="3" fill="#FF6B5B"/>
+            <rect x="0"  y="28" width="36" height="24" rx="3" fill="#B0C4DE"/>
+            <rect x="40" y="28" width="36" height="24" rx="3" fill="#3182C0"/>
+            <rect x="80" y="28" width="36" height="24" rx="3" fill="#8FA5A5"/>
+            <rect x="0"  y="56" width="36" height="24" rx="3" fill="#A28955"/>
+            <rect x="40" y="56" width="36" height="24" rx="3" fill="#CC7722"/>
+            <rect x="80" y="56" width="36" height="24" rx="3" fill="#8B4513"/>
+            <rect x="0"  y="84" width="36" height="24" rx="3" fill="#7D1B4D"/>
+            <rect x="40" y="84" width="36" height="24" rx="3" fill="#483D8B"/>
+            <rect x="80" y="84" width="36" height="24" rx="3" fill="#DA4A94"/>
+          </g>
+        </svg>
+        <span>TrueHue</span>
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/bankielewicz/TrueHue">GitHub</a>
+      <a href="https://github.com/bankielewicz/TrueHue/issues">Issues</a>
+      <a href="https://github.com/bankielewicz/TrueHue/blob/main/docs/faq.md">FAQ</a>
+      <a href="https://buymeacoffee.com/devforgeai">Buy me a coffee</a>
+    </div>
+    <div class="copyright">MIT © Bryan Ankielewicz</div>
+  </div>
+</footer>
+
+<script>
+  // Copy-to-clipboard for install block
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const targetSel = btn.getAttribute('data-copy-target');
+      const target = document.querySelector(targetSel);
+      if (!target) return;
+      const text = target.textContent;
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const range = document.createRange();
+          range.selectNodeContents(target);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          document.execCommand('copy');
+          sel.removeAllRanges();
+        }
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1600);
+      } catch (err) {
+        btn.textContent = 'Copy failed';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1600);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -21,13 +21,34 @@ skills/
 docs/
 ├── v3-plan.md             (human-reviewable plan for the v3 build)
 ├── v3-spec.md             (AI-executable spec used to build v3)
-└── (user-facing guides: getting-started.md, modes.md, faq.md, ...)
+├── submission.md          (prep content for clau.de/plugin-directory-submission)
+└── (user-facing guides: getting-started.md, modes.md, faq.md)
+site/                      (GitHub Pages source for the promo site)
+├── .nojekyll
+├── index.html
+├── styles.css
+└── assets/{logo,logo-mark,favicon}.svg
 dist/
 ├── true-hue-v2.skill      (historical v2 skill-creator archive)
 └── true-hue-v3.skill      (v3 skill-creator archive)
 README.md
 LICENSE                    (MIT)
 ```
+
+## Promo site (GitHub Pages)
+
+The `site/` folder is the source for https://bankielewicz.github.io/TrueHue/ — plain HTML + CSS, no build step. Edit `site/index.html` or `site/styles.css` directly; GitHub Pages redeploys on push.
+
+**First-time enablement** (done once, in the repo UI): Settings > Pages > Source: "Deploy from a branch" > Branch: `main` > Folder: `/site` > Save. After the first push containing `site/`, the page is live within ~60 seconds.
+
+Local preview while editing:
+
+```
+python3 -m http.server 8080 --directory site
+# then open http://localhost:8080
+```
+
+The site's logo (`site/assets/logo.svg` and companions) is also the plugin's public logo — reuse it in the README or future marketplace listings.
 
 ## Working on the skill
 
