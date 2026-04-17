@@ -45,6 +45,14 @@ Claude's opening message in a new color-analysis conversation:
 >
 > Based on your answers, I'll either walk you through the full protocol or jump into a shorter workflow."
 
+**When `AskUserQuestion` is available (Claude Code):** prefer it over the quoted text prompt above. Send the three routing questions in a single call:
+
+1. "Have you been color-typed before?" — options: Never / Online quiz or app / Professional analyst / Prior True Hue session
+2. "What's driving this conversation?" — options: First-time discovery / Verify a prior result / Evaluate items I own / Refine my palette
+3. "How much time do you have?" — options: ~5 minutes / ~15 minutes / 30+ minutes / Flexible
+
+The structured capture routes the user without parsing free text. Fall back to the plain-text prompt above when the tool isn't available (claude.ai web, Claude API without this tool, etc.).
+
 ### Routing rules after user responds
 
 - **Never typed, wants first analysis, has time:** → Mode 1 (Full Analysis). Proceed to Phase 1.
@@ -78,6 +86,37 @@ Before any analysis, the user must provide photos meeting the protocol AND compl
 **Optional:** If the user prefers a structured format for the self-check, send `assets/self_check_worksheet.md` as a supplement.
 
 The intake questionnaire's **grooming categories** (item 14) drive which conditional sections appear in the final deliverable. Read the user's selections carefully and honor them — don't pad with sections they skipped, don't omit sections they selected.
+
+### Structured capture with `AskUserQuestion` (Claude Code)
+
+When `AskUserQuestion` is available, after sending the intake template use the tool to capture the enumerable questionnaire items. Other items stay as free-text follow-ups — their answers don't fit fixed option sets.
+
+Batch into calls (the tool supports up to 4 questions per call):
+
+**Batch 1 — undertone signals:**
+- Q2 Sun response: Burn only / Tan only / Both (burn then tan) / Neither
+- Q3 Jewelry harmony: Yellow gold / Silver or platinum / Rose gold / All three look fine
+- Q9 Wrist veins: Blue / Purple / Green / Mixed or not visible
+- Q12b Skin variation (sun-exposed vs. non-exposed): Noticeable / None / Unsure
+
+**Batch 2 — context and lifestyle:**
+- Q12c Color vision: No known issues / Red-green deficiency / Other deficiency / Unsure
+- Q13a Profession: Corporate/formal / Business casual / Creative or flexible / Remote or casual-only (use Other for uniform-based, retired, etc.)
+- Q13b Climate: Hot/tropical / Hot summer + mild winter / Four-season / Cold winter + warm summer
+- Q12 Life factors (pregnancy, medication, significant tan, recent sunburn): Yes — I'll describe / None currently
+
+**Batch 3 — grooming categories (multi-select, split across two questions because the tool caps at 4 options each):**
+Set `multiSelect: true` on both.
+
+- "Makeup and grooming categories to cover" — Skincare/tinted products / Full makeup / Facial hair / Hair color
+- "Accessory categories to cover" — Eyewear / Jewelry / Ties and pocket squares / Watches and other accessories
+
+**Items that stay as free-text follow-ups** (open-ended memory, narrative, or identifying information):
+Q1 hair color (natural + current), Q4 fabric drape observation (if shots 7–8 submitted), Q5 compliment colors, Q6 fail colors, Q7 foundation history, Q8 eye color description, Q10 heritage, Q11 dye history, Q13 context/goal narrative, Q13c formal-to-casual ratio as percentages.
+
+Photos themselves are submitted as attachments, not structured answers.
+
+Fall back to the plain-text questionnaire flow when `AskUserQuestion` is unavailable.
 
 ---
 
@@ -160,6 +199,15 @@ Produce a message like:
 **Then wait for user response.** Do not proceed to Phase 4 until the user has either confirmed the readings or raised specific corrections.
 
 Draw questions from `references/checkpoint_questions.md`. Pick 2 for typical cases, 3 for high-uncertainty cases.
+
+**When `AskUserQuestion` is available (Claude Code):** after presenting the dimension readings, use the tool to capture each check-in question's response separately. For each question, offer these four options:
+
+- "Agree with this reading"
+- "Disagree — I have different evidence"
+- "Disagree — it feels more about preference than evidence"
+- "Not sure"
+
+The tool's "Other" field lets the user elaborate in free text when they pick Disagree or Not sure. Evidence-based disagreement triggers a follow-up asking for specifics; preference-based disagreement means you hold the analytical line per the rules below. Fall back to free-text conversational pushback when the tool isn't available.
 
 **Handling pushback:**
 - **Evidence-based corrections** (the user provides new information that shifts the reading): adjust the dimension readings accordingly before moving on
