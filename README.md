@@ -1,8 +1,26 @@
-# True Hue
+<div align="center">
 
-**Personal color analysis for Claude Code. The rigorous kind.**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="site/assets/logo-dark.svg">
+  <img src="site/assets/logo.svg" alt="TrueHue" width="460">
+</picture>
 
-Most online color analysis tools will hand you a season from one bad selfie in kitchen light. This plugin won't. It runs the same protocol a certified analyst runs when you pay $300–$400 for an in-person consultation: five calibrated photos, a thorough intake questionnaire, four-dimension analysis with citations, a mandatory check-in before anything gets finalized, and draping against both adjacent seasons. If your inputs aren't good enough, you'll get a reshoot request. If the evidence is genuinely ambiguous, you'll get an honest "you're between two seasons" instead of a forced verdict.
+### Personal color analysis for Claude Code.
+#### _The rigorous kind._
+
+[![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-8B3A00?style=flat-square)](#install)
+[![Version](https://img.shields.io/badge/Version-3.0.0-8B3A00?style=flat-square)](.claude-plugin/plugin.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-1A140D?style=flat-square)](LICENSE)
+
+[**Install**](#install) · [**First session**](#your-first-session) · [**Modes**](#modes) · [**Live site**](https://bankielewicz.github.io/TrueHue/) · [**FAQ**](docs/faq.md)
+
+</div>
+
+---
+
+> Most online color analysis tools will hand you a season from one bad selfie in kitchen light. **True Hue won't.**
+
+It runs the same protocol a certified analyst runs when you pay $300–$400 for an in-person consultation: five calibrated photos, a thorough intake questionnaire, four-dimension analysis with citations, a mandatory check-in before anything gets finalized, and draping against both adjacent seasons. If your inputs aren't good enough, you'll get a reshoot request. If the evidence is genuinely ambiguous, you'll get an honest "you're between two seasons" instead of a forced verdict.
 
 Plan on 20–30 minutes. What you get back is a palette of ~36 hex codes organized by wardrobe role, colors to avoid with specific reasons each one fails, metals, neutrals tailored to your coloring ("your black," "your white," "your navy"), pattern and fabric guidance, and a shoppable starter capsule at two budget tiers. Plus grooming sections — eyewear, watches, hair color, facial hair, ties, makeup — that match exactly what you selected in the intake. None of the things you didn't.
 
@@ -82,11 +100,14 @@ Optionally, Claude can generate PDF swatch cards — full-page reference, pocket
 
 ## Before you start
 
-A few honest caveats:
+> [!NOTE]
+> **Photo-based analysis carries real uncertainty.** Somewhere around 15–20% of what you'd get from an in-person session with physical fabric draping is lost when we work from photos. The plugin reports confidence levels for exactly this reason. If you're making a high-stakes decision — bridal, a major wardrobe overhaul, a career pivot that hinges on personal brand — a real analyst for an hour is worth the money.
 
-- **Photo-based analysis carries real uncertainty.** Somewhere around 15–20% of what you'd get from an in-person session with physical fabric draping is lost when we work from photos. The plugin reports confidence levels for exactly this reason. If you're making a high-stakes decision — bridal, a major wardrobe overhaul, a career pivot that hinges on personal brand — a real analyst for an hour is worth the money.
-- **Bad photos produce bad analysis.** The plugin is strict at the quality gate because cheap tools aren't, and the results show. Expect to reshoot at least one photo on your first attempt. It's normal.
-- **Deep skin gets first-class treatment.** The vein test is skipped (it's unreliable on highly pigmented skin), and the undertone read leans on fabric draping, foundation behavior, and compliment memory instead. No second-class workflow.
+> [!TIP]
+> **Bad photos produce bad analysis.** The plugin is strict at the quality gate because cheap tools aren't, and the results show. Expect to reshoot at least one photo on your first attempt. It's normal.
+
+> [!IMPORTANT]
+> **Deep skin gets first-class treatment.** The vein test is skipped (it's unreliable on highly pigmented skin), and the undertone read leans on fabric draping, foundation behavior, and compliment memory instead. No second-class workflow.
 
 ## About
 
@@ -96,4 +117,10 @@ Built on Anthropic's skill-creator framework. Licensed MIT. Issues, corrections,
 
 ## Support
 
-If True Hue saved you a $350 consultation fee, or just gave you the first palette that actually works for you, you can [buy me a coffee](https://buymeacoffee.com/devforgeai). Zero obligation — the plugin is MIT and free forever. It's just appreciated.
+If True Hue saved you a $350 consultation fee, or just gave you the first palette that actually works for you, throw a coffee in the tip jar. Zero obligation — the plugin is MIT and free forever. It's just appreciated.
+
+<p align="center">
+  <a href="https://buymeacoffee.com/devforgeai">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" height="50" width="210">
+  </a>
+</p>
