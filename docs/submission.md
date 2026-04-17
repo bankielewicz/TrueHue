@@ -16,6 +16,7 @@ Fill what applies; skip fields the form doesn't ask for.
 | **Plugin name** | `true-hue` |
 | **Tagline** | Professional-grade personal color analysis for Claude Code. The rigorous kind. |
 | **Repository** | https://github.com/bankielewicz/TrueHue |
+| **Project site** | https://bankielewicz.github.io/TrueHue/ |
 | **Homepage** | https://github.com/bankielewicz/TrueHue |
 | **Author name** | Bryan Ankielewicz |
 | **Author email** | bryan.ankielewicz@live.com |
@@ -32,13 +33,27 @@ Fill what applies; skip fields the form doesn't ask for.
 
 ## Short description (≤ 200 chars)
 
-Rigorous 12-season personal color analysis for Claude Code — five-photo intake, four-dimension analysis with evidence, mandatory check-in, and a full palette with hex codes, metals, and starter capsule.
+Rigorous 12-season personal color analysis for Claude Code — five-photo intake, four-dimension analysis with evidence, mandatory check-in, and a full palette with hex codes and starter capsule.
 
 ## Longer description
 
-True Hue runs the same protocol a certified color analyst runs in a $300–$400 in-person consultation: a five-photo calibrated intake, a 15+ item questionnaire, four-dimension analysis (undertone, value, chroma, contrast) with evidence cited from specific photos and answers, a mandatory mid-analysis check-in that catches misreads before a season gets named, adjacent-season draping comparison, and a structured deliverable containing ~36 hex codes by wardrobe role, colors to avoid with reasons, metals, neutrals specifically tailored ("your black," "your white," "your navy"), pattern and fabric guidance, and a shoppable starter capsule at two budget tiers.
+True Hue runs the protocol a certified color analyst runs in a $300–$400 in-person consultation. That means five calibrated photos, a 15+ item questionnaire, and four-dimension analysis (undertone, value, chroma, contrast) with evidence cited from specific photos and answers. Before a season is named, a mandatory mid-analysis check-in catches misreads. After draping comparison against both adjacent seasons, you get the full deliverable: ~36 hex codes by wardrobe role, colors to avoid with reasons, metals, neutrals specifically tailored ("your black," "your white," "your navy"), pattern and fabric guidance, and a shoppable starter capsule at two budget tiers.
 
 The plugin covers four modes — full analysis, closet audit, single-item check, palette refinement — and honors genuine ambiguity with a between-seasons protocol instead of forcing binary verdicts. Deep skin and olive complexions are first-class cases, not afterthoughts. Color-blind users get an opt-in accessible deliverable format. Privacy guidance is presented before photo intake.
+
+## Example use cases
+
+**1. First-time color analysis (core flow).** A user who has never been professionally color-typed takes five photos in natural daylight and fills out the intake questionnaire. True Hue runs the full protocol and delivers their season, a ~36-color palette organized by wardrobe role, avoid colors with reasons, metals, grooming guidance for their selected categories, and a starter capsule at both a ~$500 budget tier and a $1500–$3000+ investment tier. Start-to-finish: ~25 minutes plus photo capture time.
+
+**2. Single-item purchase check.** A user already typed as Bright Winter asks whether a rust-colored cardigan they're about to buy is on palette. True Hue identifies the hex, compares against the Bright Winter palette, and returns a structured verdict: on-palette, conditionally borrowable (and under what conditions — face-framing vs. distance, what to pair it with), or off-palette with a specific hex alternative from the palette that serves the same wardrobe role. Takes 2–5 minutes.
+
+**3. Closet audit against an established season.** A user typed as Soft Autumn a year ago photographs eight sweaters and five pairs of pants from their closet. True Hue evaluates each item individually: which colors are on-palette and where to wear them, which are borrowable at distance (OK for bottoms, not face-framing), and which are off-palette enough to deprioritize or donate.
+
+**4. Palette refinement — adjacent-season borrowing.** A user typed as Deep Winter asks what they can safely borrow from Bright Winter and Cool Winter when a trending color catches their eye. True Hue provides 5–10 borrowable hex codes per neighboring season with explicit conditions (intensity caps, pairing rules, face-framing vs. distance), plus specific colors that are not borrowable even at low intensity.
+
+**5. Between-seasons ambiguity handled honestly.** A user has gotten conflicting results from multiple online quizzes (Soft Summer twice, Soft Autumn once). True Hue runs the full intake protocol and finds the evidence genuinely balanced between the two candidates. Instead of forcing a single verdict, it presents both candidate palettes at reduced size, identifies 3–5 decisive test colors that would distinguish the two, and gives the user a testing protocol to resolve the ambiguity over 1–2 weeks of real wear.
+
+**6. Deep-skin user with no visible veins.** A user with deeply pigmented skin (Fitzpatrick V–VI) submits intake photos. Their wrist photo shows no visible veins — expected and non-degrading on deep skin. True Hue skips the vein test per the deep-skin protocol, leans instead on the white-vs-cream fabric drape, foundation oxidation history ("Fenty 490 works, Maybelline 380 oxidized grey"), and compliment pattern for undertone determination, and notes in the final analysis which tests were used and which were skipped.
 
 ## What's different about it
 
@@ -72,13 +87,17 @@ The plugin covers four modes — full analysis, closet audit, single-item check,
 
 ## Links to include in the review
 
-- [README.md](../README.md) — user-facing overview and install
-- [docs/getting-started.md](getting-started.md) — turn-by-turn walkthrough of a first session
-- [docs/modes.md](modes.md) — the four workflows
-- [docs/faq.md](faq.md) — privacy, deep skin, color blindness, validation, comparisons to quiz apps
-- [docs/v3-spec.md](v3-spec.md) — the full build specification (shows the rigor of the design process)
-- [skills/true-hue/SKILL.md](../skills/true-hue/SKILL.md) — the skill itself
-- [skills/true-hue/evals/evals.json](../skills/true-hue/evals/evals.json) — test cases
+Use absolute URLs when pasting into form fields:
+
+- https://github.com/bankielewicz/TrueHue — repository
+- https://bankielewicz.github.io/TrueHue/ — live project site
+- https://github.com/bankielewicz/TrueHue/blob/main/README.md — user-facing overview and install
+- https://github.com/bankielewicz/TrueHue/blob/main/docs/getting-started.md — turn-by-turn walkthrough of a first session
+- https://github.com/bankielewicz/TrueHue/blob/main/docs/modes.md — the four workflows
+- https://github.com/bankielewicz/TrueHue/blob/main/docs/faq.md — privacy, deep skin, color blindness, validation, quiz-app comparisons
+- https://github.com/bankielewicz/TrueHue/blob/main/docs/v3-spec.md — full build specification (shows design rigor)
+- https://github.com/bankielewicz/TrueHue/blob/main/skills/true-hue/SKILL.md — the skill itself
+- https://github.com/bankielewicz/TrueHue/blob/main/skills/true-hue/evals/evals.json — test cases
 
 ## Category fit — honest note for reviewers
 
