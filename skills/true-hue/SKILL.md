@@ -35,7 +35,15 @@ Before starting heavy intake, run a brief exchange to establish context and rout
 
 ### The prep exchange
 
-Claude's opening message in a new color-analysis conversation:
+**Default: send the three routing questions using `AskUserQuestion` in a single call** (one tool use, three questions). This is the primary path in Claude Code and any environment where the tool is available:
+
+1. "Have you been color-typed before?" — options: Never / Online quiz or app / Professional analyst / Prior True Hue session
+2. "What's driving this conversation?" — options: First-time discovery / Verify a prior result / Evaluate items I own / Refine my palette
+3. "How much time do you have?" — options: ~5 minutes / ~15 minutes / 30+ minutes / Flexible
+
+Do **not** paraphrase these four-option sets into plain-text bullets when `AskUserQuestion` is available — use the tool. Structured capture is materially better UX than walls of text with numbered questions.
+
+**Fallback only when `AskUserQuestion` is genuinely unavailable** (claude.ai web without the tool, Claude API callers that haven't wired it up, etc.): send this plain-text opening message instead:
 
 > "Before we start, a few quick questions so I can match the right workflow to what you need:
 >
@@ -44,14 +52,6 @@ Claude's opening message in a new color-analysis conversation:
 > 3. Roughly how much time do you have? The full analysis takes 15-30 minutes of back-and-forth including photo submission. Specific item checks or palette questions are usually 5-10 minutes.
 >
 > Based on your answers, I'll either walk you through the full protocol or jump into a shorter workflow."
-
-**When `AskUserQuestion` is available (Claude Code):** prefer it over the quoted text prompt above. Send the three routing questions in a single call:
-
-1. "Have you been color-typed before?" — options: Never / Online quiz or app / Professional analyst / Prior True Hue session
-2. "What's driving this conversation?" — options: First-time discovery / Verify a prior result / Evaluate items I own / Refine my palette
-3. "How much time do you have?" — options: ~5 minutes / ~15 minutes / 30+ minutes / Flexible
-
-The structured capture routes the user without parsing free text. Fall back to the plain-text prompt above when the tool isn't available (claude.ai web, Claude API without this tool, etc.).
 
 ### Routing rules after user responds
 
@@ -87,9 +87,9 @@ Before any analysis, the user must provide photos meeting the protocol AND compl
 
 The intake questionnaire's **grooming categories** (item 14) drive which conditional sections appear in the final deliverable. Read the user's selections carefully and honor them — don't pad with sections they skipped, don't omit sections they selected.
 
-### Structured capture with `AskUserQuestion` (Claude Code)
+### Structured capture with `AskUserQuestion` (default in Claude Code)
 
-When `AskUserQuestion` is available, after sending the intake template use the tool to capture the enumerable questionnaire items. Other items stay as free-text follow-ups — their answers don't fit fixed option sets.
+When `AskUserQuestion` is available, **use it as the default capture method** for the enumerable questionnaire items after the user confirms they've read the intake protocol. Do not reproduce these items as numbered text questions when the tool is available — use the tool. Free-text items (listed at the bottom of this section) stay as conversational follow-ups because their answers don't fit fixed option sets.
 
 Batch into calls (the tool supports up to 4 questions per call):
 
@@ -200,14 +200,16 @@ Produce a message like:
 
 Draw questions from `references/checkpoint_questions.md`. Pick 2 for typical cases, 3 for high-uncertainty cases.
 
-**When `AskUserQuestion` is available (Claude Code):** after presenting the dimension readings, use the tool to capture each check-in question's response separately. For each question, offer these four options:
+**Default: capture each check-in question's response using `AskUserQuestion`** (Claude Code and any environment with the tool). After presenting the four dimension readings with evidence, send each targeted question as an `AskUserQuestion` call with these four options:
 
 - "Agree with this reading"
 - "Disagree — I have different evidence"
 - "Disagree — it feels more about preference than evidence"
 - "Not sure"
 
-The tool's "Other" field lets the user elaborate in free text when they pick Disagree or Not sure. Evidence-based disagreement triggers a follow-up asking for specifics; preference-based disagreement means you hold the analytical line per the rules below. Fall back to free-text conversational pushback when the tool isn't available.
+Do not render the targeted questions as plain-text bullets when `AskUserQuestion` is available — use the tool. The "Other" field the tool provides lets the user elaborate in free text when they pick Disagree or Not sure. Evidence-based disagreement triggers a follow-up asking for specifics; preference-based disagreement means you hold the analytical line per the rules below.
+
+Fall back to free-text conversational pushback only when the tool is genuinely unavailable.
 
 **Handling pushback:**
 - **Evidence-based corrections** (the user provides new information that shifts the reading): adjust the dimension readings accordingly before moving on
