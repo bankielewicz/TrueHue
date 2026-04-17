@@ -37,11 +37,21 @@ That's it. The next time you ask Claude about color analysis, the skill takes ov
 
 ## Your first session
 
-Tell Claude what you want. Anything like this works:
+Two ways to start:
+
+**Recommended:** run the dedicated command, which authorizes the `AskUserQuestion` tool for structured pickers instead of walls of text:
+
+```
+/true-hue:analyze
+```
+
+**Or** just tell Claude what you want — any phrasing works:
 
 > "Can you walk me through a full personal color analysis?"
 
-Claude opens with a couple of setup questions — have you been typed before, what's driving this, how much time do you have — and routes you to the right workflow. For a first-timer, that's the full Mode 1 protocol.
+The natural-language path triggers the skill but falls back to plain-text questionnaires because no slash command was invoked to authorize `AskUserQuestion`. Both paths produce the same analysis; the command path is just nicer to drive.
+
+Claude opens with a few setup questions — have you been typed before, what's driving this, how much time do you have — and routes you to the right workflow. For a first-timer, that's the full Mode 1 protocol.
 
 You'll need a few things ready:
 
