@@ -22,6 +22,7 @@ Fill what applies; skip fields the form doesn't ask for.
 | **Author email** | bryan.ankielewicz@live.com |
 | **License** | MIT |
 | **Version** | 3.0.0 |
+| **Privacy policy** | https://bankielewicz.github.io/TrueHue/privacy.html (or https://github.com/bankielewicz/TrueHue/blob/main/PRIVACY.md as markdown source) |
 | **Suggested category** | `personal-style` (see "Category fit" note below) |
 
 ## Install commands

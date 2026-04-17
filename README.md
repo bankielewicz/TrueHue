@@ -12,7 +12,7 @@
 [![Version](https://img.shields.io/badge/Version-3.0.0-8B3A00?style=flat-square)](.claude-plugin/plugin.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-1A140D?style=flat-square)](LICENSE)
 
-[**Install**](#install) · [**First session**](#your-first-session) · [**Modes**](#modes) · [**Live site**](https://bankielewicz.github.io/TrueHue/) · [**FAQ**](docs/faq.md)
+[**Install**](#install) · [**First session**](#your-first-session) · [**Modes**](#modes) · [**Live site**](https://bankielewicz.github.io/TrueHue/) · [**FAQ**](docs/faq.md) · [**Privacy**](PRIVACY.md)
 
 </div>
 
