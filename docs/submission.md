@@ -37,7 +37,7 @@ Rigorous 12-season personal color analysis for Claude Code — five-photo intake
 
 ## Longer description
 
-True Hue runs the protocol a certified color analyst runs in a $300–$400 in-person consultation. That means five calibrated photos, a 15+ item questionnaire, and four-dimension analysis (undertone, value, chroma, contrast) with evidence cited from specific photos and answers. Before a season is named, a mandatory mid-analysis check-in catches misreads. After draping comparison against both adjacent seasons, you get the full deliverable: ~36 hex codes by wardrobe role, colors to avoid with reasons, metals, neutrals specifically tailored ("your black," "your white," "your navy"), pattern and fabric guidance, and a shoppable starter capsule at two budget tiers.
+True Hue runs a protocol modeled on what a certified color analyst runs in a $300–$400 in-person consultation. That means five calibrated photos, a 15+ item questionnaire, and four-dimension analysis (undertone, value, chroma, contrast) with evidence cited from specific photos and answers. Before a season is named, a mandatory mid-analysis check-in catches misreads. After draping comparison against both adjacent seasons, you get the full deliverable: ~36 hex codes by wardrobe role, colors to avoid with reasons, metals, neutrals specifically tailored ("your black," "your white," "your navy"), pattern and fabric guidance, and a shoppable starter capsule at two budget tiers.
 
 The plugin covers four modes — full analysis, closet audit, single-item check, palette refinement — and honors genuine ambiguity with a between-seasons protocol instead of forcing binary verdicts. Deep skin and olive complexions are first-class cases, not afterthoughts. Color-blind users get an opt-in accessible deliverable format. Privacy guidance is presented before photo intake.
 
@@ -103,10 +103,10 @@ Use absolute URLs when pasting into form fields:
 
 Every external plugin currently in the directory is a developer tool (LSPs, linters, framework helpers) or a service integration (GitHub, Linear, Asana, Discord, Firebase, etc.). True Hue is neither — it's a consumer/content plugin for personal color analysis, a category the directory hasn't covered yet.
 
-The case for inclusion anyway: Claude Code users are the directory's audience, and a subset of them have the exact problem this solves — they've taken quiz-app color analyses and gotten hollow results, they've priced in-person consultations at $300–$400 and balked, and they'd genuinely benefit from a rigorous analysis they can run in their terminal. The plugin meets the technical bar (validates clean, no runtime dependencies, MIT-licensed) and carries none of the red flags (no network calls, no MCP, no hooks executing arbitrary code). It's also a demonstration of what skill-only plugins can do when the subject matter is craft-intensive and the content is the product.
+The case for inclusion anyway: Claude Code users are the directory's audience, and some subset of them will have the exact problem this solves — wanting rigorous color analysis without paying $300–$400 for an in-person session, and finding free quiz apps unsatisfying. The plugin meets the technical bar (validates clean, no runtime dependencies, MIT-licensed) and carries none of the red flags (no network calls, no MCP, no hooks executing arbitrary code).
 
 If the right answer is "this belongs in a different category we haven't created yet" — happy to be the first entry in it.
 
 ## One-liner for the form's "Why should this be in the directory?" box
 
-True Hue demonstrates that skill-only plugins can deliver serious craft-intensive consumer value without any runtime dependencies — it runs a complete 12-season color analysis protocol that matches the design rigor of a professional in-person consultation, and it's the kind of use case most Claude Code users don't realize the platform is capable of until they see it shipped.
+True Hue demonstrates that skill-only plugins can deliver serious craft-intensive consumer value without any runtime dependencies — it runs a complete 12-season color analysis protocol modeled on a professional in-person consultation.
