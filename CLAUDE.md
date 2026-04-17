@@ -10,7 +10,7 @@ The repo root *is* the plugin root — no `src/` wrapping. Layout:
 
 ```
 .claude-plugin/
-├── plugin.json            (plugin manifest; name=true-hue, v3.0.0, MIT)
+├── plugin.json            (plugin manifest; name=true-hue, v3.1.0, MIT)
 └── marketplace.json       (single-plugin marketplace index)
 skills/
 └── true-hue/              (the skill itself — SKILL.md + assets + references + evals)
